@@ -44,6 +44,12 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>`;
     }
 
+    function displayMoviesForBestRanking(data, carouselSelector) {
+        const filteredData = { ...data, results: data.results.slice(1) };
+        displayMoviesInCarousel(filteredData, carouselSelector);
+    }
+
+
     function displayMoviesInCarousel(data, carouselSelector) {
         const carouselElement = document.querySelector(carouselSelector);
         const moviesContainer = carouselElement.querySelector('.carousel-movies-container') || carouselElement; // Si .carousel-movies-container n'existe pas, utilisez l'élément carrousel lui-même
@@ -117,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initialisation
     fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&limit=1", displayBestMovie);
-    fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page_size=7", data => displayMoviesInCarousel(data, '.best-ranking .carousel-movies'));
+    fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page_size=8", data => displayMoviesForBestRanking(data, '.best-ranking .carousel-movies'));
     fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page_size=7&genre=Comedy", data => displayMoviesInCarousel(data, '.category-1 .carousel-movies'));
     fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page_size=7&genre=Family", data => displayMoviesInCarousel(data, '.category-2 .carousel-movies'));
     fetchMovies("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page_size=7&genre=Romance", data => displayMoviesInCarousel(data, '.category-3 .carousel-movies'));
