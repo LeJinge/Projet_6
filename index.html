@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="scripts.js"></script>
+    <title>Mon site de Streaming</title>
+</head>
+
+<body>
+    <div class="index_page">
+        <div class="header">
+            <div class="header_container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo du site de streaming">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="menu_button" href="index.html">Accueil</a></li>
+                        <li><a class="menu_button" href="#">Catégorie</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="best-movie">
+            <h2>Meilleur film</h2>
+            <div class="best-movie-content"></div>
+        </section>
+
+        <section class="carousel-section best-ranking">
+            <h2>Les films les mieux notés</h2>
+            <div class="carousel-wrapper">
+                <button class="prev"><img src="images/back.png" height="60" width="60" alt="Bouton précédent"/></button>
+                <div class="carousel-movies"></div>
+                <button class="next"><img src="images/next.png" height="60" width="60" alt="Bouton suivant"/></button>
+            </div>
+        </section>
+
+        <section class="carousel-section category-1">
+            <h2>Meilleur comédie</h2>
+            <div class="carousel-wrapper">
+                <button class="prev"><img src="images/back.png" height="60" width="60" alt="Bouton précédent"/></button>
+                <div class="carousel-movies"></div>
+                <button class="next"><img src="images/next.png" height="60" width="60" alt="Bouton suivant"/></button>
+            </div>
+        </section>
+
+        <section class="carousel-section category-2">
+            <h2>Meilleur film pour la famille</h2>
+            <div class="carousel-wrapper">
+                <button class="prev"><img src="images/back.png" height="60" width="60" alt="Bouton précédent"/></button>
+                <div class="carousel-movies"></div>
+                <button class="next"><img src="images/next.png" height="60" width="60" alt="Bouton suivant"/></button>
+            </div>
+        </section>
+
+        <section class="carousel-section category-3">
+            <h2>Meilleur film romantique</h2>
+            <div class="carousel-wrapper">
+                <button class="prev"><img src="images/back.png" height="60" width="60" alt="Bouton précédent"/></button>
+                <div class="carousel-movies"></div>
+                <button class="next"><img src="images/next.png" height="60" width="60" alt="Bouton suivant"/></button>
+            </div>
+        </section>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Image du film">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mon site de streaming © 2023</p>
+    </footer>
+
+</body>
+
+</html>
